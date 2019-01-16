@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 
 class Comment extends Component {
-    render() {
+    render() {      
         return( 
-            <div>{this.props.comment}</div>
+            <div>Comentário: {this.props.comment.comentinho}</div>
         );
     }
 }

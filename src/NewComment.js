@@ -20,7 +20,6 @@ class NewComment extends Component {
             <div>
                 <textarea onChange={this.commentHandler} value={this.state.newComment}></textarea>
                 <button onClick={this.sendComment}>Enviar</button>
-                {JSON.stringify(this.state)}
             </div>
         );
     }
