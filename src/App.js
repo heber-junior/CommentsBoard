@@ -11,13 +11,22 @@ class App extends Component {
   }
 
   sendComment = comment => {
-    this.setState({comments: [...this.state.comments, comment]});
+    const id = database.ref().child('comment').push().key;
+    const comments = {};
+    comments['comments/'+id] = { comment };
+
+    database.ref().update(comments);
   }
 
   componentDidMount(){
     this.comments = database.ref('comments');
-    this.comments.on('value', snapshot => { this.setState({ comments: snapshot.val()}) });
-    this.state.isLoading = false;
+    this.comments.on('value', snapshot => {
+      if (snapshot.val() != null)
+        this.setState({
+          comments: snapshot.val(),
+          isLoading: false
+        }) 
+    });
   }
 
   render() {
