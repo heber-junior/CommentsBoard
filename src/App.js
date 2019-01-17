@@ -25,7 +25,7 @@ class App extends Component {
         this.setState({
           comments: snapshot.val(),
           isLoading: false
-        }) 
+        })
     })
   }
 
