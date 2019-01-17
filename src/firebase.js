@@ -1,5 +1,5 @@
-import firebase from 'firebase/app';
-import 'firebase/database';
+import firebase from 'firebase/app'
+import 'firebase/database'
 
 var config = {
     apiKey: "AIzaSyCu80J2-gCRfxbGmem-mr0xhBSHRKHPsqk",
@@ -10,6 +10,6 @@ var config = {
     messagingSenderId: "236131139434"
   };
 
-  firebase.initializeApp(config);
+  firebase.initializeApp(config)
 
-  export const database = firebase.database();
+  export const database = firebase.database()

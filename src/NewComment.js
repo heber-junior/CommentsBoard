@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 
 class NewComment extends Component {
 
@@ -11,8 +11,8 @@ class NewComment extends Component {
     }
 
     sendComment = () => {
-        this.props.sendComment(this.state.newComment);
-        this.setState({newComment: ''});
+        this.props.sendComment(this.state.newComment)
+        this.setState({newComment: ''})
     }
 
     render() {
@@ -21,8 +21,8 @@ class NewComment extends Component {
                 <textarea onChange={this.commentHandler} value={this.state.newComment}></textarea>
                 <button onClick={this.sendComment}>Enviar</button>
             </div>
-        );
+        )
     }
 }
 
-export default NewComment;
+export default NewComment
